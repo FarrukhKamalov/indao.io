@@ -29,6 +29,7 @@ function Navbar({ changeLang }) {
 			>
 				<Wrapper>
 					<div className='flex items-center justify-between'>
+						{/* Logo */}
 						<div>
 							<img src={logo} alt='logo' className='w-[50px] md:w-[70px]' />
 						</div>
