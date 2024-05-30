@@ -1,7 +1,7 @@
 const translateRu = {
 	navbar: {
 		indao: 'Indao',
-		reclaim: 'вернуть',
+		reclaim: 'Reclaim',
 		about: 'О нас',
 		button: 'Лауч кошелек',
 	},
