@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	background: #131413;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.subscribe-container {
+	position: relative;
+	background: linear-gradient(
+			to bottom,
+			rgba(19, 20, 19, 1) 0%,
+			rgba(19, 20, 19, 0) 20%,
+			rgba(19, 20, 19, 0) 70%,
+			rgba(19, 20, 19, 1) 100%
+		),
+		url('./assets/bg-circuits.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.left-video,
+.right-video {
+	transition: transform 1s ease-in-out;
+}
+
+.text-content {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.move-left {
+	transform: translateX(-100%);
+}
+
+.move-right {
+	transform: translateX(100%);
+}
+
+.show {
+	opacity: 1;
+}
+
+.card1:hover {
+	box-shadow: 5px 10px 15px #12ff8157;
+}
+
+.card1:hover .learn_more {
+	color: #12ff80;
+	border-bottom: 2px solid;
+}
+
+.card1:hover .arrow {
+	transform: rotate(0);
+	color: #12ff80;
+}
+
+.security:hover .bug {
+	color: #12ff80;
+	border-bottom: 2px solid;
+}
+
+.blog-container {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(
+			to bottom,
+			rgba(19, 20, 19, 1) 0%,
+			rgba(19, 20, 19, 0) 20%,
+			rgba(19, 20, 19, 0) 70%,
+			rgba(19, 20, 19, 1) 100%
+		),
+		url('./assets/unlock-bg.svg');
+	background-size: cover;
+	background-position: center;
+}
+
+.governance-container {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(
+			to bottom,
+			rgba(19, 20, 19, 1) 0%,
+			rgba(19, 20, 19, 0) 20%,
+			rgba(19, 20, 19, 0) 70%,
+			rgba(19, 20, 19, 1) 100%
+		),
+		url('./assets/bg-glass.png');
+	background-size: cover;
+	background-position: center;
+}
+
