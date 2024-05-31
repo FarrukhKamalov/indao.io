@@ -1,7 +1,8 @@
 import React from 'react'
-import secondslider from '../array/SecondSliderArr'
+import secondslider from '../array/SecondSliderArr' // Assuming this is the correct path to the secondslider array
 import Wrapper from '../layout/Wrapper'
 import { useTranslation } from 'react-i18next'
+import Marquee from 'react-fast-marquee'
 
 function SecondSlider() {
 	const { t } = useTranslation()
@@ -14,27 +15,23 @@ function SecondSlider() {
 						{t('secondslider.partners')}
 					</h2>
 				</div>
-				<div className='relative overflow-hidden h-[200px] w-full grid place-items-center mt-[20px]'>
-					<div className='image-slider-track flex animate-playRight'>
-						{secondslider(secondslider).map((slide, index) => (
-							<div
-								key={index}
-								className='h-[150px] w-[200px] grid place-items-center p-[15px] perspective-[100px] text-white'
-							>
-								<img
-									src={slide.img}
-									alt={slide.title}
-									className='h-[60px] md:h-[80px] object-cover transition-transform duration-1000 hover:translate-z-[20px] rounded-full'
-								/>
-								<p className='text-white font-semibold text-center'>
-									{slide.title}
-								</p>
-							</div>
-						))}
-					</div>
-					<div className='absolute top-0 left-0 h-full w-[20%] bg-gradient-to-r from-[#131413] to-transparent z-2'></div>
-					<div className='absolute top-0 right-0 h-full w-[20%] bg-gradient-to-l from-[#131413] to-transparent z-2'></div>
-				</div>
+				<Marquee direction='right'>
+					{secondslider().map(slide => (
+						<div
+							key={slide.title}
+							className='flex flex-col items-center mr-[20px] mt-[40px] p-[20px] md:p-[50px]'
+						>
+							<img
+								src={slide.img}
+								alt={slide.title}
+								className='w-[100px] rounded-full mb-[10px]'
+							/>
+							<span className='text-white text-[15px] text-center'>
+								{slide.title}
+							</span>
+						</div>
+					))}
+				</Marquee>
 			</Wrapper>
 		</>
 	)

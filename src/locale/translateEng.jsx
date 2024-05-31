@@ -19,11 +19,6 @@ const translateEng = {
 	secondslider: {
 		partners: 'Partners',
 		testnets: 'including testnet',
-		reclaim: 'Reclaim',
-		verida: 'Verida',
-		gamer31: 'GAMER31',
-		polygon: 'Polygon ID',
-		komet: 'KOMET',
 	},
 	security: {
 		finance: 'Finance and banking',

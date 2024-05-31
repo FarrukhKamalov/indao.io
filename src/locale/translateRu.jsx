@@ -19,11 +19,6 @@ const translateRu = {
 	secondslider: {
 		partners: 'Партнеры',
 		testnets: 'включая тестовую сеть',
-		reclaim: 'вернуть',
-		verida: 'Верида',
-		gamer31: 'ГЕЙМЕР31',
-		polygon: 'Идентификатор полигона',
-		komet: 'КОМЕТ',
 	},
 	security: {
 		finance: 'Финансы и банковское дело',
