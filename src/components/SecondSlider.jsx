@@ -1,5 +1,5 @@
 import React from 'react'
-import secondslider from '../array/SecondSliderArr' // Assuming this is the correct path to the secondslider array
+import secondslider from '../array/SecondSliderArr'
 import Wrapper from '../layout/Wrapper'
 import { useTranslation } from 'react-i18next'
 import Marquee from 'react-fast-marquee'

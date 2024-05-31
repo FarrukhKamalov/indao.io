@@ -15,35 +15,6 @@ function Footer() {
 						className='cursor-pointer w-[70px] md:w-[90px]'
 					/>
 					<ul className='flex flex-col items-center md:items-start gap-3 font-semibold'>
-						{/* <li>
-							<a href='#' className='text-[#848689]'>
-								Indao (Core)
-							</a>
-						</li>
-						<li>
-							<a href='#' className='text-[#848689]'>
-								Docs
-							</a>
-						</li> */}
-					</ul>
-					<ul className='flex flex-col items-center md:items-start gap-3 font-semibold'>
-						{/* <li>
-							<a href='#' className='uppercase text-white font-semibold'>
-								ecosystem
-							</a>
-						</li> */}
-						{/* <li>
-							<a href='#' className='text-[#848689]'>
-								Explore
-							</a>
-						</li>
-						<li>
-							<a href='#' className='text-[#848689]'>
-								Grants
-							</a>
-						</li> */}
-					</ul>
-					<ul className='flex flex-col items-center md:items-start gap-3 font-semibold'>
 						<li>
 							<a href='#' className='uppercase text-white font-semibold'>
 								{t('footer.community')}

@@ -1,12 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Wrapper from '../layout/Wrapper'
-import CountUp from 'react-countup'
-import ScrollTrigger from 'react-scroll-trigger'
 import { useTranslation } from 'react-i18next'
 
 function Subscribe() {
 	const [inView, setInView] = useState(false)
-	const [counterOn, setCounterOn] = useState(false)
 	const ref = useRef(null)
 
 	useEffect(() => {
@@ -37,9 +34,6 @@ function Subscribe() {
 		>
 			<Wrapper>
 				<div className='flex flex-col items-center justify-center text-start'>
-					{/* <p className='text-[#A0A2A6] font-semibold text-[17px] pt-[50px]'>
-                        ENTRUSTED TO KEEP YOUR ASSETS INDAO
-                    </p> */}
 					<h2 className='text-white font-semibold text-[20px] md:text-[35px] md:leading-[55px] w-[80%] mt-[15px] text-center'>
 						{t('subscribe.h2')}
 					</h2>

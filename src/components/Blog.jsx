@@ -1,30 +1,26 @@
 import React from 'react'
 import Wrapper from '../layout/Wrapper'
-import ai from '../assets/ai-big-icon.svg'
-import restaking from '../assets/restaking.svg' // Import restaking image
-import payments from '../assets/payments.svg' // Import payments image
-import institutions from '../assets/institutions.svg' // Import institutions image
-import social from '../assets/social.svg' // Import social image
 import { useTranslation } from 'react-i18next'
+import Images from '../Images'
 
 function Blog() {
 	const { t } = useTranslation()
 
 	const blog = [
 		{
-			img: restaking,
+			img: Images.restaking,
 			title: t('blog.restaking'),
 		},
 		{
-			img: payments,
+			img: Images.payments,
 			title: t('blog.payments'),
 		},
 		{
-			img: institutions,
+			img: Images.institutions,
 			title: t('blog.institutions'),
 		},
 		{
-			img: social,
+			img: Images.social,
 			title: t('blog.social'),
 		},
 	]
