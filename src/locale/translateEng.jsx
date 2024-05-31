@@ -71,6 +71,18 @@ const translateEng = {
 		resources: 'resources',
 		gitbook: 'Gitbook',
 	},
+	tooltip: {
+		first_t:
+			'Customer identity verification to combat fraud and money laundering. Secure authentication for online banking and financial services. Managing digital assets and investments using DID.',
+		second_t:
+			'Issuance of verifiable diplomas, certificates and other credentials. Confirmation of qualifications and experience of applicants when hiring. Creation of decentralized reputation and portfolio systems.',
+		third_t:
+			'Tracking the origin and authenticity of goods. Verification of the identity of supply chain participants. Automation of customs clearance and certification of cargo.',
+		fourth_t:
+			'Creation of reliable property rights registries based on blockchain. Simplification of procedures for buying and selling and registering real estate. Real estate tokenization for investment and collective ownership.',
+		five_t:
+			'Verification of the identity of policyholders to combat fraud. Secure data exchange with underwriters and medical institutions. Automated risk assessment and personalization of insurance products.',
+	},
 }
 
 export default translateEng

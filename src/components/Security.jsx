@@ -31,17 +31,13 @@ function Security() {
 						<div className='flex flex-col gap-[10px] w-full'>
 							<li className='group flex items-center text-white font-semibold text-[18px] gap-3 cursor-pointer'>
 								<img src={code} alt='code' className='z-10' />
-								<Tooltip
-									text={`Верификация личности клиентов для борьбы с мошенничеством и отмыванием денег. Безопасная аутентификация для онлайн-банкинга и финансовых сервисов. Управление цифровыми активами и инвестициями с помощью DID.`}
-								>
+								<Tooltip text={t('tooltip.first_t')}>
 									<p className='w-full md:w-[350px]'>{t('security.finance')}</p>
 								</Tooltip>
 							</li>
 							<li className='group flex items-center text-white font-semibold text-[18px] gap-3 cursor-pointer'>
 								<img src={code} alt='code' className='z-10' />
-								<Tooltip
-									text={`Выдача верифицируемых дипломов, сертификатов и других учетных данных. Подтверждение квалификации и опыта соискателей при найме на работу. Создание децентрализованных систем репутации и портфолио.`}
-								>
+								<Tooltip text={t('tooltip.second_t')}>
 									<p className='w-full md:w-[350px]'>
 										{t('security.education')}
 									</p>
@@ -49,9 +45,7 @@ function Security() {
 							</li>
 							<li className='group flex items-center text-white font-semibold text-[18px] gap-3 cursor-pointer'>
 								<img src={code} alt='code' className='z-10' />
-								<Tooltip
-									text={`Отслеживание происхождения и подлинности товаров. Верификация личности участников цепочки поставок. Автоматизация таможенного оформления и сертификации грузов.`}
-								>
+								<Tooltip text={t('tooltip.third_t')}>
 									<p className='w-full md:w-[350px]'>{t('security.supply')}</p>
 								</Tooltip>
 							</li>
@@ -59,17 +53,13 @@ function Security() {
 						<div className='flex flex-col gap-[10px] w-full'>
 							<li className='group flex items-center text-white font-semibold text-[18px] gap-3 cursor-pointer'>
 								<img src={code} alt='code' className='z-10' />
-								<Tooltip
-									text={`Создание надежных реестров прав собственности на базе блокчейна. Упрощение процедур купли-продажи и регистрации недвижимости. Токенизация недвижимости для инвестиций и коллективного владения.`}
-								>
+								<Tooltip text={t('tooltip.fourth_t')}>
 									<p className='w-full md:w-[350px]'>{t('security.estete')}</p>
 								</Tooltip>
 							</li>
 							<li className='group flex items-center text-white font-semibold text-[18px] gap-3 cursor-pointer'>
 								<img src={code} alt='code' className='z-10' />
-								<Tooltip
-									text={`Верификация личности страхователей для борьбы с мошенничеством. Безопасный обмен данными с андеррайтерами и медучреждениями. Автоматизированная оценка рисков и персонализация страховых продуктов.`}
-								>
+								<Tooltip text={t('tooltip.five_t')}>
 									<p className='w-full md:w-[350px]'>
 										{t('security.insurance')}
 									</p>
