@@ -64,16 +64,16 @@ function Navbar({ changeLang }) {
 										/>
 									</summary>
 
-									<ul className='p-2 shadow menu dropdown-content z-[1] bg-white rounded-[10px] w-[100px] font-semibold mt-[10px]'>
+									<ul className='p-2 shadow menu dropdown-content z-[1] glass rounded-[10px] w-[100px] font-semibold mt-[10px]'>
 										<li>
 											<a onClick={() => changeLang('ru')}>
-												<img src={russian} alt='' className='w-5' />
+												<img src={russian} alt='' className='w-6' />
 												RUS
 											</a>
 										</li>
 										<li>
 											<a onClick={() => changeLang('eng')}>
-												<img src={english} alt='' className='w-5' />
+												<img src={english} alt='' className='w-6' />
 												ENG
 											</a>
 										</li>
