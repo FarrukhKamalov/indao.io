@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from '../assets/logo1.jpg'
 import Wrapper from '../layout/Wrapper'
 import { useTranslation } from 'react-i18next'
+import Images from '../Images'
 
 function Footer() {
 	const { t } = useTranslation()
@@ -10,7 +10,7 @@ function Footer() {
 			<Wrapper>
 				<div className='flex flex-col md:flex-row md:items-start items-center md:justify-between justify-center gap-[10px] pt-[100px] h-full pb-[40px]'>
 					<img
-						src={logo}
+						src={Images.logo}
 						alt='logo'
 						className='cursor-pointer w-[70px] md:w-[90px]'
 					/>

@@ -1,8 +1,7 @@
 import React from 'react'
 import Wrapper from '../layout/Wrapper'
-import rightArrow from '../assets/right-arrow.png'
-import manifestobg from '../assets/newmanifest.png'
 import { useTranslation } from 'react-i18next'
+import Images from '../Images'
 
 function SmartAccount() {
 	const { t } = useTranslation()
@@ -25,7 +24,7 @@ function SmartAccount() {
 							</a>
 							<div className='arrow-container hover:brightness-125'>
 								<img
-									src={rightArrow}
+									src={Images.rightArrow}
 									alt='arrow'
 									className='w-[30px] mt-[4px]'
 								/>
@@ -33,7 +32,11 @@ function SmartAccount() {
 						</div>
 					</div>
 
-					<img src={manifestobg} alt='404' className=' w-full md:w-[550px]' />
+					<img
+						src={Images.manifestbg}
+						alt='404'
+						className=' w-full md:w-[550px]'
+					/>
 				</div>
 			</Wrapper>
 		</div>

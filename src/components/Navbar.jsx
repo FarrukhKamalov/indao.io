@@ -1,11 +1,8 @@
 import React, { useState, useRef } from 'react'
-import logo from '../assets/logo1.jpg'
 import Wrapper from '../layout/Wrapper'
 import MobNavbar from '../shared/MobNavbar'
 import { useTranslation } from 'react-i18next'
-import english from '../assets/english.png'
-import russian from '../assets/russian.png'
-import lang from '../assets/lang.png'
+import Images from '../Images'
 
 function Navbar({ changeLang }) {
 	const [mobNavbar, setMobNavbar] = useState(false)
@@ -42,7 +39,11 @@ function Navbar({ changeLang }) {
 					<div className='flex items-center justify-between'>
 						{/* Logo */}
 						<div>
-							<img src={logo} alt='logo' className='w-[50px] md:w-[70px]' />
+							<img
+								src={Images.logo}
+								alt='logo'
+								className='w-[50px] md:w-[70px]'
+							/>
 						</div>
 						<ul className='md:flex items-center ml-[80px] text-[#9DA0A2] font-semibold gap-[25px] hidden'>
 							<li>
@@ -69,16 +70,13 @@ function Navbar({ changeLang }) {
 
 						<div className='flex items-center gap-5'>
 							<div className='custom-select'>
-								<details
-									className='dropdown'
-									ref={dropdownRef}
-								>
+								<details className='dropdown' ref={dropdownRef}>
 									<summary
 										className='flex items-center'
 										onClick={toggleDropdown}
 									>
 										<img
-											src={lang}
+											src={Images.lang}
 											alt=''
 											className='w-8 cursor-pointer mt-[6px]'
 										/>
@@ -87,13 +85,13 @@ function Navbar({ changeLang }) {
 									<ul className='p-2 shadow menu dropdown-content z-[1] glass rounded-[10px] w-[100px] font-semibold mt-[10px] ml-[-30px]'>
 										<li>
 											<a onClick={() => handleLanguageChange('ru')}>
-												<img src={russian} alt='' className='w-6' />
+												<img src={Images.russian} alt='' className='w-6' />
 												RUS
 											</a>
 										</li>
 										<li>
 											<a onClick={() => handleLanguageChange('eng')}>
-												<img src={english} alt='' className='w-6' />
+												<img src={Images.english} alt='' className='w-6' />
 												ENG
 											</a>
 										</li>
