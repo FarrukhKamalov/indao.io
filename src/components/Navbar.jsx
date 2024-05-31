@@ -5,6 +5,7 @@ import MobNavbar from '../shared/MobNavbar'
 import { useTranslation } from 'react-i18next'
 import english from '../assets/english.png'
 import russian from '../assets/russian.png'
+import lang from '../assets/lang.png'
 
 function Navbar({ changeLang }) {
 	const [mobNavbar, setMobNavbar] = useState(false)
@@ -13,10 +14,6 @@ function Navbar({ changeLang }) {
 	const handleShowMobileNavbar = () => {
 		setMobNavbar(!mobNavbar)
 		document.body.classList.toggle('overflow-hidden')
-	}
-
-	const toggleLanguage = lang => {
-		changeLang(lang)
 	}
 
 	return (
@@ -58,17 +55,30 @@ function Navbar({ changeLang }) {
 
 						<div className='flex items-center gap-5'>
 							<div className='custom-select'>
-								{/* <select
-									onChange={e => toggleLanguage(e.target.value)}
-									className='appearance-none bg-transparent border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-gray-500'
-								>
-									<option value='ru' data-image={russian}>
-										RUS
-									</option>
-									<option value='eng' data-image={english}>
-										ENG
-									</option>
-								</select> */}
+								<details className='dropdown'>
+									<summary className='flex items-center'>
+										<img
+											src={lang}
+											alt=''
+											className='w-8 cursor-pointer mt-[6px]'
+										/>
+									</summary>
+
+									<ul className='p-2 shadow menu dropdown-content z-[1] bg-white rounded-[10px] w-[100px] font-semibold mt-[10px]'>
+										<li>
+											<a onClick={() => changeLang('ru')}>
+												<img src={russian} alt='' className='w-5' />
+												RUS
+											</a>
+										</li>
+										<li>
+											<a onClick={() => changeLang('eng')}>
+												<img src={english} alt='' className='w-5' />
+												ENG
+											</a>
+										</li>
+									</ul>
+								</details>
 							</div>
 							<button
 								className='py-[4px] px-[12px] font-semibold rounded-[5px] hidden md:block'
@@ -76,15 +86,14 @@ function Navbar({ changeLang }) {
 							>
 								{t('navbar.button')}
 							</button>
-						</div>
-
-						<div
-							className='flex flex-col gap-[6px] cursor-pointer md:hidden'
-							onClick={handleShowMobileNavbar}
-						>
-							<div className='bg-white w-[25px] h-[2px]'></div>
-							<div className='bg-white w-[25px] h-[2px]'></div>
-							<div className='bg-white w-[25px] h-[2px]'></div>
+							<div
+								className='flex flex-col gap-[6px] cursor-pointer md:hidden'
+								onClick={handleShowMobileNavbar}
+							>
+								<div className='bg-white w-[25px] h-[2px]'></div>
+								<div className='bg-white w-[25px] h-[2px]'></div>
+								<div className='bg-white w-[25px] h-[2px]'></div>
+							</div>
 						</div>
 					</div>
 				</Wrapper>
