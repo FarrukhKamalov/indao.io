@@ -41,7 +41,7 @@ function Blog() {
 						<div>
 							<div className='relative card1 flex flex-col border-[2px] rounded-[20px] border-[#303033] hover:border-[#12FF80] w-[350px] md:w-[580px] cursor-pointer bg-[#121312] shadow-lg p-4'>
 								<div>
-									<img src={ai} alt='AI' className='w-[200px]' />
+									<img src={Images.ai} alt='AI' className='w-[200px]' />
 								</div>
 								<h2 className='uppercase text-[50px] text-white font-semibold'>
 									{t('blog.did')}
