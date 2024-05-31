@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import logo from '../assets/logo1.jpg'
 import Wrapper from '../layout/Wrapper'
 import MobNavbar from '../shared/MobNavbar'
@@ -9,11 +9,25 @@ import lang from '../assets/lang.png'
 
 function Navbar({ changeLang }) {
 	const [mobNavbar, setMobNavbar] = useState(false)
+	const [dropdownOpen, setDropdownOpen] = useState(false)
 	const { t, i18n } = useTranslation()
+	const dropdownRef = useRef(null)
 
 	const handleShowMobileNavbar = () => {
 		setMobNavbar(!mobNavbar)
 		document.body.classList.toggle('overflow-hidden')
+	}
+
+	const handleLanguageChange = lang => {
+		changeLang(lang)
+		setDropdownOpen(false)
+		if (dropdownRef.current) {
+			dropdownRef.current.open = false
+		}
+	}
+
+	const toggleDropdown = () => {
+		setDropdownOpen(!dropdownOpen)
 	}
 
 	return (
@@ -55,8 +69,14 @@ function Navbar({ changeLang }) {
 
 						<div className='flex items-center gap-5'>
 							<div className='custom-select'>
-								<details className='dropdown'>
-									<summary className='flex items-center'>
+								<details
+									className='dropdown'
+									ref={dropdownRef}
+								>
+									<summary
+										className='flex items-center'
+										onClick={toggleDropdown}
+									>
 										<img
 											src={lang}
 											alt=''
@@ -66,13 +86,13 @@ function Navbar({ changeLang }) {
 
 									<ul className='p-2 shadow menu dropdown-content z-[1] glass rounded-[10px] w-[100px] font-semibold mt-[10px] ml-[-30px]'>
 										<li>
-											<a onClick={() => changeLang('ru')}>
+											<a onClick={() => handleLanguageChange('ru')}>
 												<img src={russian} alt='' className='w-6' />
 												RUS
 											</a>
 										</li>
 										<li>
-											<a onClick={() => changeLang('eng')}>
+											<a onClick={() => handleLanguageChange('eng')}>
 												<img src={english} alt='' className='w-6' />
 												ENG
 											</a>
